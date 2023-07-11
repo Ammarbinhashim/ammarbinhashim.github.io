@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width", initial-scale=1">
 <meta name="description" content>
 <title>Test php</title>
-<p>bruh</p>
 </head>
+  <body>
+    <h1>This can only be used by Emor</h1>
+    <fieldset>
+      <form id="form1" method="post" action="post.php">
+        <?php
+          if (isset($_POST['submit']))
+          {
+            if (isset($error))
+            {
+                echo "<p style='color:red;'>"
+                . $error . </p>;
+            }
+        }
+        ?>
+    
+      Post:
+      <input type="text" name="Post" required/>
+      <br>
+    </form>
+      </fieldset>
+    
+  </body>
 </html>
