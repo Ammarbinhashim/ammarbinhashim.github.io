@@ -1,0 +1,249 @@
+html body {
+    background: inherit;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+}
+
+.certificate, .report {
+    position: relative;
+    width: 1182px;
+    margin: auto;
+}
+
+.backgroundDiv {
+    border: 5px white solid;
+    overflow-x: hidden;
+    height: 816px;
+    background: whitesmoke;
+    /* Using important here so that the background is preserved for printing */
+    background: url('../images/watermark_base.jpg') !important;
+    background-size: 100% 100% !important;
+}
+
+.certificate .headerImage {
+    margin-top: 220px;
+    color: whitesmoke;
+    width: 600px;
+    height: 100px;
+}
+
+.logo {
+    font-style: normal;
+    letter-spacing: -.03em;
+    padding-bottom: 4px;
+}
+
+.trainingServices {
+    white-space: nowrap;
+    border-left: 2px whitesmoke solid;
+    padding-left: 12px;
+    margin-left: 4px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.link {
+    font-size: .8em;
+    position: absolute;
+    bottom: 43px;
+    right: 0px;
+    color: lightgrey !important;
+    text-decoration: none !important;
+    margin-top: 10px;
+}
+
+.notificationStrip {
+    position: fixed;
+    z-index: 21;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f7f5ca;
+    padding: 6px 0px;
+    font-size: 15px;
+    font-family: "Arial", "Helvetica", sans-serif;
+    overflow: hidden;
+}
+
+.notificationIcon {
+    color: #cc8a00;
+    padding-left: 15px;
+}
+
+.notificationMessage {
+    padding-left: 5px;
+    cursor: default;
+}
+
+.notificationAction {
+    color: #0371c1;
+}
+
+.notificationDismiss {
+    padding-right: 15px;
+    float: right;
+    color: #0371c1;
+    border: none;
+    background: none;
+}
+
+.notificationAction:hover, .notificationDismiss:hover {
+    text-decoration: underline;
+}
+
+.clickableSpan {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+}
+
+.report .content {
+    padding: 10px 10px 10px 136px;
+}
+
+.report tr td div {
+    padding: 2px 0px;
+}
+
+.report li {
+    white-space: nowrap;
+    padding: 3px;
+    margin: 0px;
+}
+
+.report .headerImage {
+    margin-top: 150px;
+    margin-left: 50px;
+    color: whitesmoke;
+    width: 600px;
+    height: 100px;
+}
+
+.report .smallText {
+    font-size: 1em;
+}
+
+.report .title {
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.report .mediumText {
+    padding-top: 30px;
+    font-size: 1.1em;
+}
+
+.report .chaptersHeading {
+    padding-top: 30px;
+    font-size: 1.1em;
+
+}
+
+.report .info {
+    font-size: .9em;
+    padding-top: 30px;
+}
+
+.report ol {
+    margin: 0;
+    margin-left: 40px;
+    line-height: 100%;
+
+}
+
+.report firstList {
+    line-height: 130%;
+}
+
+.certificate .content {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.certificate .name {
+    padding-top: 40px;
+    font-size: 2em;
+}
+
+.certificate .smallText {
+    padding-top: 30px;
+    font-size: 1.6em;
+}
+
+.certificate .mediumText {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+.certificate .largeText {
+    font-size: 2.5em;
+}
+
+.certificate .signature {
+    margin-top: 50px;
+    width: 200px;
+    height: 80px;
+}
+
+.certificate .designation {
+    font-size: 0.7em;
+
+}
+
+.certificate .dateText {
+    text-align: right;
+    margin-right: 40px;
+    margin-top: -30px;
+    font-size: 1.4em;
+}
+
+.certificate .percent {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 5px;
+}
+
+.shareModal {
+    font-family: sans-serif;
+}
+
+#shareURL {
+    width: 80%;
+}
+
+.buttonLink {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #0076a8;
+}
+
+.buttonLink:hover {
+    text-decoration: underline;
+    color: #005487;
+}
+
+.buttonLink:focus {
+    color: #005487;
+}
+
+.progressText {
+    font-weight: 600;
+}
+
+@media print {
+    .notificationStrip {
+        display: none !important;
+    }
+
+    @page {
+        margin: 0;
+        size: landscape;
+    }
+
+    a::after {
+        content: none !important;
+    }
+}
